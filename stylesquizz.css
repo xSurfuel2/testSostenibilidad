@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./imagenes/DH.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen al fondo */  
+    margin-top: auto; 
+    margin-bottom: auto;
+    height: auto;
+}
+
+#quiz-container {
+    width: 90%; /* Cambia a un porcentaje para ser más flexible */
+    max-width: 500px; /* Ancho máximo */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.466);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin-top: 8%; 
+    margin-bottom: 8%;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #fce487; /* Color dorado */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.question {
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.answers {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.144);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+label:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff5722; /* Color naranja */
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e64a19; /* Color naranja más oscuro al pasar el mouse */
+}
+
+#result {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    }
+    h1 {
+        font-size: 22px;
+    }
+    .question {
+        font-size: 16px;
+    }
+    button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .question {
+        font-size: 14px;
+    }
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+    #quiz-container {
+        padding: 10px;
+    }
+}
+
+.correct-text {
+    color: green; /* Color verde para respuestas correctas */
+}
+
+.incorrect-text {
+    color: red; /* Color rojo para respuestas incorrectas */
+}
